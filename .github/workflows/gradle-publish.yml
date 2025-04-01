@@ -40,7 +40,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build && ./gradlew mergeJars
 
       - name: Publish to GitHub Packages
         run: ./gradlew publish
@@ -64,7 +64,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.event.inputs.tag }}
-          files: build/libs/*.jar
+          files: Merged/*.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -73,6 +73,6 @@ jobs:
         if: github.event_name == 'release'
         uses: softprops/action-gh-release@v1
         with:
-          files: build/libs/*.jar
+          files: Merged/*.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -2,9 +2,8 @@ package io.thecheese.orestars;
 
 import com.mojang.logging.LogUtils;
 import io.thecheese.orestars.creativetab.CreativeTabInit;
-import io.thecheese.orestars.item.ModItems;
+import io.thecheese.orestars.item.ModItemsForge;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,19 +17,19 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 
-@Mod(OreStars.MOD_ID)
-public class OreStars
+@Mod("orestars")
+public class OreStarsForge
 {
 
     public static final String MOD_ID = "orestars";
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public OreStars(FMLJavaModLoadingContext context)
+    public OreStarsForge(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
 
-        ModItems.register(modEventBus);
+        ModItemsForge.register(modEventBus);
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         CreativeTabInit.TABS.register(bus);

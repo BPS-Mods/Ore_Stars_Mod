@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "io.thecheese.orestars.OreStars"
+            "io.thecheese.orestars.OreStarsFabric"
         ]
     },
     "mixins": [
