@@ -1,0 +1,14 @@
+{
+  "item.orestars.iron_star" : "Iron Star",
+  "item.orestars.gold_star" : "Gold Star",
+  "item.orestars.diamond_star" : "Diamond Star",
+  "item.orestars.lapislazuli_star" : "Lapis Lazuli Star",
+  "item.orestars.redstone_star" : "Redstone Star",
+  "item.orestars.copper_star" : "Copper Star",
+  "item.orestars.coal_star" : "Coal Star",
+  "item.orestars.amethyst_star" : "Amethyst Star",
+  "item.orestars.emerald_star" : "Emerald Star",
+  "item.orestars.quartz_star" : "Quartz Star",
+  "item.orestars.netherite_star" : "Netherite Star",
+  "itemgroup.orestars_group": "Ore Stars Tab"
+}
