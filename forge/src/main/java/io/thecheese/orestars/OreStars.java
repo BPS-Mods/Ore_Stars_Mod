@@ -2,14 +2,13 @@ package io.thecheese.orestars;
 
 import com.mojang.logging.LogUtils;
 import io.thecheese.orestars.item.ModItems;
+import io.thecheese.orestars.item.OreStarsCreativeModeTab;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -28,6 +27,7 @@ public class OreStars {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         ModItems.register(modEventBus);
+        OreStarsCreativeModeTab.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)  {
