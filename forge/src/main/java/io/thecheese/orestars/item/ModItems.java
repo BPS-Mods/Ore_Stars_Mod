@@ -1,16 +1,16 @@
 package io.thecheese.orestars.item;
 
-import io.thecheese.orestars.OreStarsForge;
+import io.thecheese.orestars.OreStars;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import static io.thecheese.orestars.creativetab.CreativeTabInit.addToTab;
+import static io.thecheese.orestars.item.OreStarsCTB.addToTab;
 
-public class ModItemsForge {
+public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, OreStarsForge.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, OreStars.MOD_ID);
 
     public static final RegistryObject<Item> Iron_Star = addToTab(ITEMS.register("iron_star",
             () -> new Item(new Item.Properties())));
