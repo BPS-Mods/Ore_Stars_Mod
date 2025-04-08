@@ -1,8 +1,8 @@
 package io.thecheese.orestars;
 
 import com.mojang.logging.LogUtils;
-import io.thecheese.orestars.creativetab.CreativeTabInit;
-import io.thecheese.orestars.item.ModItemsForge;
+import io.thecheese.orestars.item.ModItems;
+import io.thecheese.orestars.item.OreStarsCTB;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -17,30 +17,26 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 
-@Mod("orestars")
-public class OreStarsForge
+@Mod(OreStars.MOD_ID)
+public class OreStars
 {
 
     public static final String MOD_ID = "orestars";
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public OreStarsForge(FMLJavaModLoadingContext context)
-    {
-        IEventBus modEventBus = context.getModEventBus();
+    public OreStars() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItemsForge.register(modEventBus);
-
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        CreativeTabInit.TABS.register(bus);
+        OreStarsCTB.register(modEventBus);
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-
-        MinecraftForge.EVENT_BUS.register(this);
-
         modEventBus.addListener(this::addCreative);
 
+        MinecraftForge.EVENT_BUS.register(this);
     }
+
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
