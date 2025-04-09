@@ -7,7 +7,7 @@
     "mixins": [
     ],
     "client": [
-        "MixinTitleScreenForge"
+      "MixinTitleScreen"
     ],
     "server": [
     ],
