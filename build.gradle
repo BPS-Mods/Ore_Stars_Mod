@@ -6,5 +6,5 @@ plugins {
 
 forgix {
     group = "io.thecheese.orestars"
-    mergedJarName = "OreStars-Forge-Fabric-${version}-1.20.1.jar"
+    mergedJarName = "OreStars-Forge-Fabric-${version}-${minecraft_version}.jar"
 }
