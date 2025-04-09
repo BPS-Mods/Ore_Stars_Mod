@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
     "GGG",
     "GSG",
@@ -14,7 +15,7 @@
     }
   },
   "result": {
-    "item": "orestars:gold_star",
+    "id": "orestars:gold_star",
     "count": 1
   }
 }

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
     "RRR",
     "RSR",
@@ -14,7 +15,7 @@
     }
   },
   "result": {
-    "item": "orestars:redstone_star",
+    "id": "orestars:redstone_star",
     "count": 1
   }
 }

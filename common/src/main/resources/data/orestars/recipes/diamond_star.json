@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
     "DDD",
     "DSD",
@@ -14,7 +15,7 @@
     }
   },
   "result": {
-    "item": "orestars:diamond_star",
+    "id": "orestars:diamond_star",
     "count": 1
   }
 }

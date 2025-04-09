@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
     "EEE",
     "ESE",
@@ -14,7 +15,7 @@
     }
   },
   "result": {
-    "item": "orestars:emerald_star",
+    "id": "orestars:emerald_star",
     "count": 1
   }
 }
