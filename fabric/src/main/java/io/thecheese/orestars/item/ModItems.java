@@ -6,7 +6,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class ModItemsFabric {
+public class ModItems {
     public static final Item IronStar = registerItem("iron_star", new Item(new Item.Settings()));
     public static final Item GoldStar = registerItem("gold_star", new Item(new Item.Settings()));
     public static final Item EmeraldStar = registerItem("emerald_star", new Item(new Item.Settings()));
