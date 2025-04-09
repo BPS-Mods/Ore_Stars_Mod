@@ -1,13 +1,13 @@
 package io.thecheese.orestars.item;
 
-import io.thecheese.orestars.OreStarsFabric;
+import io.thecheese.orestars.OreStars;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class ModItemsFabric {
+public class ModItems {
     public static final Item IronStar = registerItem("iron_star", new Item(new FabricItemSettings()));
     public static final Item GoldStar = registerItem("gold_star", new Item(new FabricItemSettings()));
     public static final Item EmeraldStar = registerItem("emerald_star", new Item(new FabricItemSettings()));
@@ -23,11 +23,11 @@ public class ModItemsFabric {
 
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(OreStarsFabric.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, new Identifier(OreStars.MOD_ID, name), item);
     }
 
     public static void registerModItems() {
-        OreStarsFabric.LOGGER.info("Registering Mod Items for " + OreStarsFabric.MOD_ID);
+        OreStars.LOGGER.info("Registering Mod Items for " + OreStars.MOD_ID);
 
     }
 }

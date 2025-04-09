@@ -62,7 +62,6 @@ public class OreStars
         {
 
             LOGGER.info("Hello o/");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
 }
