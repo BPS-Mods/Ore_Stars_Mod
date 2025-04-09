@@ -1,6 +1,6 @@
 package io.thecheese.orestars.item;
 
-import io.thecheese.orestars.OreStarsFabric;
+import io.thecheese.orestars.OreStars;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup ORESTAR_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(OreStarsFabric.MOD_ID, "orestars_group"),
+            new Identifier(OreStars.MOD_ID, "orestars_group"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.orestars_group"))
                     .icon(() -> new ItemStack(ModItems.IronStar)).entries((displayContext, entries) -> {
                         entries.add(ModItems.IronStar);
@@ -28,6 +28,6 @@ public class ModItemGroups {
                     }).build());
 
     public static void registerItemGroups() {
-        OreStarsFabric.LOGGER.info("Registering Item Group for " + OreStarsFabric.MOD_ID);
+        OreStars.LOGGER.info("Registering Item Group for " + OreStars.MOD_ID);
     }
 }

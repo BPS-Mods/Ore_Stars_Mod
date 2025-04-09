@@ -15,6 +15,5 @@ public class MixinTitleScreen {
     private void init(CallbackInfo info) {
 
         Constants.LOG.info("If you see this. Hi :)");
-        Constants.LOG.info("MC Version: {}", Minecraft.getInstance().getVersionType());
     }
 }
